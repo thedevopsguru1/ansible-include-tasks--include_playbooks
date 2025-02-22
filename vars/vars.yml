@@ -1,0 +1,2 @@
+#using -e@vars/vars.yml
+var1: paky
