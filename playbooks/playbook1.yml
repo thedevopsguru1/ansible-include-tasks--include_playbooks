@@ -1,0 +1,20 @@
+---
+- name: Install httpd on worker nodes and Ansible on master
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install httpd on worker nodes
+      yum:
+        name: httpd
+        state: present
+      when: "'workers' in group_names"
+      tags:
+        - httpd
+
+    - name: Install Ansible on master node
+      yum:
+        name: nginx
+        state: present
+      when: "'masters' in group_names"
+      tags:
+        - ansible

@@ -1,0 +1,8 @@
+- name: Display a debug message
+  debug:
+    msg: "Hello Ansible World"
+
+- name: update all servers
+  yum:
+    name: "*"
+    state: latest

@@ -1,0 +1,15 @@
+all:
+  children:
+    masters:
+      hosts:
+        server1:
+          ansible_user: root
+          ansible_host: 64.23.192.194
+    workers:
+      hosts:
+        worker1:
+          ansible_user: root
+          ansible_host: 164.92.110.227
+        worker2:
+          ansible_user: root
+          ansible_host: 137.184.183.123
